@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./layui-v2.6.8/layui/css/layui.css">
+    <script src="./layui-v2.6.8/layui/layui.js"></script>
+    <style>
+        .titlePhoto {
+            text-align: center;
+        }
+
+        .tree {
+            font-size: 17px;
+        }
+
+        .leftTree {
+
+            border: seagreen;
+            border-style: solid solid none none;
+            text-align: right;
+        }
+
+        .rightTree {
+            margin-top: 30px;
+            border: seagreen;
+            border-style: solid none none none;
+            text-align: left;
+        }
+
+        /* .leftTree ul li div {
+            padding-right: 10px;
+        } */
+
+        .leftTree ul div a {
+            margin-right: 10px;
+            display: block;
+        }
+
+        .rightTree ul div a {
+            margin-left: 10px;
+            display: block;
+        }
+
+        /* .leftTree ul li::before {
+            position: absolute;
+            content: '';
+            top: -0.01em;
+            left: -0.7em;
+            width: 0.5em;
+            height: 0.615em;
+            border-style: none none solid solid;
+            border-width: 0.05em;
+            border-color: #aaa;
+        } */
+    </style>
+    <title>专业介绍</title>
+</head>
+
+<body bgcolor="lightblue">
+    <ul class="layui-nav" lay-filter="">
+        <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
+        <li class="layui-nav-item"><a href="">主页</a></li>
+        <li class="layui-nav-item layui-this"><a href="">专业介绍</a></li>
+        <li class="layui-nav-item"><a href="">招生就业</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">数据分析</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <img src="img/专业介绍.webp" alt="" style="width: 100%; height: 400px;">
+            <br>
+            <p
+                style="position:absolute; z-index:2; left: 100px; top: 100px;; font-size: 50px; font-weight: 600; color: rgba(144, 153, 231, 0.911);">
+                专业介绍</p>
+            <br>
+            <p
+                style="position:absolute; z-index:2; left: 100px; top: 220px;; font-size: 20px; font-weight: 600; color: rgba(107, 182, 233, 0.911);">
+                目前该网站已经收录了6所高校智能财务专业的相关信息<br>包括专业简介，培养目标，课程概览等</p>
+            <br>
+        </div>
+
+    </div>
+
+
+
+    <div class=" tree">
+        <div class="layui-col-md12 titlePhoto">
+            <img src="./img/西瓜.webp" alt="" height="100px">
+        </div>
+        <hr>
+        <div class="left layui-col-md4 layui-col-md-offset2">
+            <div class="leftTree">
+                <br>
+                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
+                杭州电子科技大学
+
+                <ul>
+                    <div>
+                        <a href="">专业简介</a>
+
+                        <a href="">培养目标</a>
+                    </div>
+
+                    <li id="course0"></li>
+                </ul>
+            </div>
+            <div class="leftTree">
+                <br>
+                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
+                浙江大学
+
+                <ul>
+                    <div>
+                        <a href="">专业简介</a>
+
+                        <a href="">培养目标</a>
+                    </div>
+
+                    <li id="course1"></li>
+                </ul>
+            </div>
+
+            <div class="leftTree">
+                <br>
+                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
+                南京审计大学
+
+                <ul>
+                    <div>
+                        <a href="">专业简介</a>
+
+                        <a href="">培养目标</a>
+                    </div>
+
+                    <li id="course2"></li>
+                </ul>
+            </div>
+            <div class="leftTree">
+                <br>
+                <button type="button" class="layui-btn layui-btn-radius layui-btn-warm"><a
+                        href="./addSchool.html">添加高校</a></button>
+
+            </div>
+        </div>
+
+        <div class="right layui-col-md4">
+            <div class="rightTree">
+                <br>
+                南京理工大学
+                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
+                <ul>
+                    <div>
+                        <a href="">专业简介</a>
+
+                        <a href="">培养目标</a>
+                    </div>
+
+                    <li id="course3"></li>
+                </ul>
+            </div>
+
+            <div class="rightTree">
+                <br>
+                广东财经大学
+                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
+                <ul>
+                    <div>
+                        <a href="">专业简介</a>
+
+                        <a href="">培养目标</a>
+                    </div>
+
+                    <li id="course4"></li>
+                </ul>
+            </div>
+
+            <div class="rightTree">
+                <br>
+                山东财经大学
+                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
+                <ul>
+                    <div>
+                        <a href="">专业简介</a>
+
+                        <a href="">培养目标</a>
+                    </div>
+
+                    <li id="course5"></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <br>
+
+    </div>
+
+    <hr>
+    这是页尾
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use(['tree', 'element'], function () {
+            var element = layui.element;
+            var tree = layui.tree;
+            //…
+            var inst0 = tree.render({
+                elem: '#course0'  //绑定元素
+                , data: [{
+                    title: '课程概览' //一级菜单
+                    , children: [
+                        { title: '财务基础' },
+                        { title: 'python与人工智能' },//二级菜单
+                        { title: '财务报告与信息披露' },
+                        { title: '面向对象程序设计' },
+                        { title: '数据库系统原理' },
+                        { title: '计算机组成原理' },
+                        { title: '数据结构' },
+                        { title: 'WEB引用程序设计' },//二级菜单
+                        { title: '软件建模与分析' },
+                        { title: '企业税务管理与决策' },
+                        { title: '风险管控与数字审计' },
+                        { title: '大数据与智能财务' },
+                        { title: '公司战略和风险管理' },
+                        { title: '海量数据存储和管理' },//二级菜单
+                        { title: '云计算和分布式系统' },
+                    ]
+                },],
+
+            });
+
+            var inst1 = tree.render({
+                elem: '#course1'  //绑定元素
+                , data: [{
+                    title: '课程概览' //一级菜单
+                    , children: [
+                        { title: '财务基础' },
+                        { title: 'python与人工智能' },//二级菜单
+                        { title: '财务报告与信息披露' },
+
+                        { title: '数据库系统原理' },
+
+                        { title: '数据结构' },
+                        { title: '企业税务管理与决策' },
+                        { title: '风险管控与数字审计' },
+                        { title: '大数据与智能财务' },
+                        { title: '公司战略和风险管理' },
+                        { title: '海量数据存储和管理' },//二级菜单
+                        { title: '云计算和分布式系统' },
+                    ]
+                },],
+
+            });
+
+            var inst2 = tree.render({
+                elem: '#course2'  //绑定元素
+                , data: [{
+                    title: '课程概览' //一级菜单
+                    , children: [
+                        { title: '财务基础' },
+
+                        { title: '财务报告与信息披露' },
+
+                        { title: '数据库系统原理' },
+
+                        { title: '企业税务管理与决策' },
+                        { title: '风险管控与数字审计' },
+                        { title: '大数据与智能财务' },
+                        { title: '公司战略和风险管理' },
+                        { title: '海量数据存储和管理' },//二级菜单
+
+                    ]
+                },],
+
+            });
+
+
+
+            var inst3 = tree.render({
+                elem: '#course3'  //绑定元素
+                , data: [{
+                    title: '课程概览' //一级菜单
+                    , children: [
+                        { title: '财务基础' },
+
+                        { title: '财务报告与信息披露' },
+
+                        { title: '数据库系统原理' },
+
+                        { title: '企业税务管理与决策' },
+                        { title: '风险管控与数字审计' },
+                        { title: '大数据与智能财务' },
+                        { title: '公司战略和风险管理' },
+
+                    ]
+                },],
+
+            });
+
+            var inst4 = tree.render({
+                elem: '#course4'  //绑定元素
+                , data: [{
+                    title: '课程概览' //一级菜单
+                    , children: [
+                        { title: '财务基础' },
+
+                        { title: '财务报告与信息披露' },
+
+                        { title: '数据库系统原理' },
+
+                        { title: '数据结构' },
+
+                        { title: '大数据与智能财务' },
+                        { title: '公司战略和风险管理' },
+
+                    ]
+                },],
+
+            });
+
+            var inst5 = tree.render({
+                elem: '#course5'  //绑定元素
+                , data: [{
+                    title: '课程概览' //一级菜单
+                    , children: [
+                        { title: '财务基础' },
+                        { title: 'python与人工智能' },//二级菜单
+                        { title: '财务报告与信息披露' },
+
+                        { title: '数据库系统原理' },
+
+                        { title: '企业税务管理与决策' },
+
+                        { title: '大数据与智能财务' },
+                        { title: '公司战略和风险管理' },
+
+                    ]
+                },],
+
+            });
+
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

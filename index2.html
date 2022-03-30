@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./layui-v2.6.8/layui/css/layui.css">
+    <script src="./layui-v2.6.8/layui/layui.js"></script>
+    <style>
+        ul.domtree,
+        ul.domtree ul {
+            margin: auto;
+            margin: 0;
+            padding: 0 0 0 2em;
+        }
+
+        ul.domtree li {
+            list-style: none;
+            position: relative;
+        }
+
+        ul.domtree>li:first-child:before {
+            border-style: none none solid none;
+        }
+
+        ul.domtree li:before {
+            position: absolute;
+            content: '';
+            top: -0.01em;
+            left: -0.7em;
+            width: 0.5em;
+            height: 0.615em;
+            border-style: none none solid solid;
+            border-width: 0.05em;
+            border-color: #aaa;
+        }
+
+        ul.domtree li:not(:last-child):after {
+            position: absolute;
+            content: '';
+            top: 0.7em;
+            left: -0.7em;
+            bottom: 0;
+            border-style: none none none solid;
+            border-width: 0.05em;
+            border-color: #aaa;
+        }
+    </style>
+    <title>首页</title>
+</head>
+
+<body bgcolor="lightblue">
+    <ul class="layui-nav" lay-filter="">
+        <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
+        <li class="layui-nav-item"><a href="">主页</a></li>
+        <li class="layui-nav-item layui-this"><a href="">专业介绍</a></li>
+        <li class="layui-nav-item"><a href="">招生就业</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">考研攻略</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <img src="img/专业介绍.webp" alt="" style="width: 100%; height: 400px;">
+            <br>
+            <p
+                style="position:absolute; z-index:2; left: 100px; top: 100px;; font-size: 50px; font-weight: 600; color: rgba(144, 153, 231, 0.911);">
+                专业介绍</p>
+            <br>
+            <p
+                style="position:absolute; z-index:2; left: 100px; top: 220px;; font-size: 20px; font-weight: 600; color: rgba(107, 182, 233, 0.911);">
+                目前该网站已经收录了6所高校智能财务专业的相关信息<br>包括培养目标，课程设计，就业方向等</p>
+            <br>
+        </div>
+
+    </div>
+
+
+
+    <ul class="domtree">
+        <li>
+            1级菜单
+            <ul>
+                <li>2级菜单</li>
+                <li>
+                    2级菜单
+                    <ul>
+                        <li>3级菜单</li>
+                        <li>3级菜单</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            1级菜单
+            <ul>
+                <li>2级菜单</li>
+                <li>2级菜单</li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function () {
+            var element = layui.element;
+
+            //…
+        });
+    </script>
+</body>
+
+</html>

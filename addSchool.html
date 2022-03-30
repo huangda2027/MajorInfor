@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加高校</title>
+    <link rel="stylesheet" href="layui-v2.6.8/layui/css/layui.css">
+    <script src="./layui-v2.6.8/layui/layui.js"></script>
+</head>
+
+<body bgcolor="lightblue">
+    <ul class="layui-nav" lay-filter="">
+        <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
+        <li class="layui-nav-item"><a href="">主页</a></li>
+        <li class="layui-nav-item layui-this"><a href="">专业介绍</a></li>
+        <li class="layui-nav-item"><a href="">招生就业</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">数据分析</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+
+
+    <div class="layui-col-md10">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">高校名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入高校名称"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">高校类型</label>
+                <div class="layui-input-block">
+                    <select name="city" lay-verify="required">
+                        <option value=""></option>
+                        <option value="0">理工类高校</option>
+                        <option value="1">经管类高校</option>
+                        <option value="2">综合类高校</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">专业简介</label>
+                <div class="layui-input-block">
+                    <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">培养目标</label>
+                <div class="layui-input-block">
+                    <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">课程选择</label>
+                <div class="layui-input-block" <input type="checkbox" name="like[write]" title="财务基础">
+                    <input type="checkbox" name="like[read]" title="python与人工智能" checked>
+                    <input type="checkbox" name="like[dai]" title="财务报告与信息披露">
+                    <input type="checkbox" name="like[write]" title="面向对象程序设计">
+                    <input type="checkbox" name="like[read]" title="数据库系统原理" checked>
+                    <input type="checkbox" name="like[dai]" title="计算机组成原理">
+                    <input type="checkbox" name="like[write]" title="数据结构">
+                    <input type="checkbox" name="like[read]" title="WEB引用程序设计">
+                    <input type="checkbox" name="like[dai]" title="软件建模与分析">
+                    <input type="checkbox" name="like[write]" title="企业税务管理与决策">
+                    <input type="checkbox" name="like[read]" title="风险管控与数字审计" checked>
+                    <input type="checkbox" name="like[dai]" title="大数据与智能财务" checked>
+                    <input type="checkbox" name="like[write]" title="公司战略和风险管理">
+                    <input type="checkbox" name="like[read]" title="海量数据存储和管理">
+                    <input type="checkbox" name="like[dai]" title="云计算和分布式系统">
+                    <button type="button" class="layui-btn layui-btn-radius">添加其他课程</button>
+                </div>
+
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">开关</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="switch" lay-skin="switch">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">是否公开</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="sex" value="是" title="是">
+                    <input type="radio" name="sex" value="否" title="否" checked>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">培养计划</label>
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" id="test1">
+                        <i class="layui-icon">&#xe67c;</i>上传培养计划
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        //Demo
+        layui.use(['form', 'tree', 'element', 'upload'], function () {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function (data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>
