@@ -69,9 +69,9 @@
             <a href="javascript:;">数据分析</a>
             <dl class="layui-nav-child">
                 <!-- 二级菜单 -->
-                <dd><a href="">移动模块</a></dd>
-                <dd><a href="">后台模版</a></dd>
-                <dd><a href="">电商平台</a></dd>
+                <dd><a href="./pages/compare.html">课程对比</a></dd>
+                <dd><a href="">培养计划</a></dd>
+                <dd><a href="">专业走向</a></dd>
             </dl>
         </li>
         <li class="layui-nav-item"><a href="">社区</a></li>
@@ -93,265 +93,85 @@
     </div>
 
 
+    <div class="timeLine">
+        <ul class="layui-timeline">
+            <li class="layui-timeline-item">
+              <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+              <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">2018年9月14日 </h3>
+                    <a href="./schools/NanJingLiGong.html">南京理工大学</a>>
+                    <p>
+                        南京理工大学（Nanjing University of Science and Technology），简称“南理工”，位于江苏省南京市，是隶属于工业和信息化部，
+                        <br>由工信部、教育部与江苏省人民政府共建的全国重点大学，是国家“双一流”建设高校
+                    </p>
+              </div>
+            </li>
+            <br>
+            <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                  <h3 class="layui-timeline-title">2019年6月3日 </h3>
+                      <a href="">浙江大学</a>>
+                      <p>
+                        浙江大学（Zhejiang University），简称“浙大”，位于浙江省杭州市，是中华人民共和国教育部直属的综合性全国重点大学，位列国家“双一流”。
+                      </p>
+                </div>
+              </li>
+              <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                  <h3 class="layui-timeline-title">2019年9月2日 </h3>
+                      <a href="">南京审计大学</a>>
+                      <p>
+                        南京审计大学（Nanjing Audit University），简称“南审”，位于江苏省南京市，
+                        <br>是中国审计高等教育发源地之一，是教育部、财政部、审计署和江苏省人民政府共建高校
+                      </p>
+                </div>
+              </li>
+              <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                  <h3 class="layui-timeline-title">2020年9月1日 </h3>
+                      <a href="">杭州电子科技大学</a>>
+                      <p>
+                        杭州电子科技大学（Hangzhou Dianzi University），简称“杭电”，位于杭州市，是浙江省人民政府与国防科技工业局共建高校，
+                        <br>是一所电子信息特色突出，经管学科优势明显，工、理、经、管、文、法、艺等多学科相互渗透的教学研究型大学
+                      </p>
+                </div>
+              </li>
+              <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                  <h3 class="layui-timeline-title">2021年1月16日 </h3>
+                      <a href="">山东财经大学</a>>
+                      <p>
+                        山东财经大学（Shandong University of Finance and Economics），位于山东省济南市，
+                        <br>是山东省人民政府与中华人民共和国财政部、中华人民共和国教育部共建高校。
+                      </p>
+                </div>
+              </li>
+              <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                  <h3 class="layui-timeline-title">2021年10月27日 </h3>
+                      <a href="">广东财经大学</a>>
+                      <p>
+                        广东财经大学（Guangdong University of Finance & Economics）是一所以经济学、管理学、法学为主体，
+                        <br>文学、理学、工学、艺术学等多学科协同发展的广东省重点建设大学
+                      </p>
+                </div>
+              </li>
 
-    <div class=" tree">
-        <div class="layui-col-md12 titlePhoto">
-            <img src="./img/西瓜.webp" alt="" height="100px">
-        </div>
-        <hr>
-        <div class="left layui-col-md4 layui-col-md-offset2">
-            <div class="leftTree">
-                <br>
-                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
-                杭州电子科技大学
-
-                <ul>
-                    <div>
-                        <a href="">专业简介</a>
-
-                        <a href="">培养目标</a>
-                    </div>
-
-                    <li id="course0"></li>
-                </ul>
-            </div>
-            <div class="leftTree">
-                <br>
-                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
-                浙江大学
-
-                <ul>
-                    <div>
-                        <a href="">专业简介</a>
-
-                        <a href="">培养目标</a>
-                    </div>
-
-                    <li id="course1"></li>
-                </ul>
-            </div>
-
-            <div class="leftTree">
-                <br>
-                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
-                南京审计大学
-
-                <ul>
-                    <div>
-                        <a href="">专业简介</a>
-
-                        <a href="">培养目标</a>
-                    </div>
-
-                    <li id="course2"></li>
-                </ul>
-            </div>
-            <div class="leftTree">
-                <br>
-                <button type="button" class="layui-btn layui-btn-radius layui-btn-warm"><a
-                        href="./addSchool.html">添加高校</a></button>
-
-            </div>
-        </div>
-
-        <div class="right layui-col-md4">
-            <div class="rightTree">
-                <br>
-                南京理工大学
-                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
-                <ul>
-                    <div>
-                        <a href="">专业简介</a>
-
-                        <a href="">培养目标</a>
-                    </div>
-
-                    <li id="course3"></li>
-                </ul>
-            </div>
-
-            <div class="rightTree">
-                <br>
-                广东财经大学
-                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
-                <ul>
-                    <div>
-                        <a href="">专业简介</a>
-
-                        <a href="">培养目标</a>
-                    </div>
-
-                    <li id="course4"></li>
-                </ul>
-            </div>
-
-            <div class="rightTree">
-                <br>
-                山东财经大学
-                <button type="button" class="layui-btn layui-btn-radius">信息更新</button>
-                <ul>
-                    <div>
-                        <a href="">专业简介</a>
-
-                        <a href="">培养目标</a>
-                    </div>
-
-                    <li id="course5"></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <br>
-
+          </ul>
     </div>
 
     <hr>
     这是页尾
     <script>
         //注意：导航 依赖 element 模块，否则无法进行功能性操作
-        layui.use(['tree', 'element'], function () {
+        layui.use(['element'], function () {
             var element = layui.element;
-            var tree = layui.tree;
-            //…
-            var inst0 = tree.render({
-                elem: '#course0'  //绑定元素
-                , data: [{
-                    title: '课程概览' //一级菜单
-                    , children: [
-                        { title: '财务基础' },
-                        { title: 'python与人工智能' },//二级菜单
-                        { title: '财务报告与信息披露' },
-                        { title: '面向对象程序设计' },
-                        { title: '数据库系统原理' },
-                        { title: '计算机组成原理' },
-                        { title: '数据结构' },
-                        { title: 'WEB引用程序设计' },//二级菜单
-                        { title: '软件建模与分析' },
-                        { title: '企业税务管理与决策' },
-                        { title: '风险管控与数字审计' },
-                        { title: '大数据与智能财务' },
-                        { title: '公司战略和风险管理' },
-                        { title: '海量数据存储和管理' },//二级菜单
-                        { title: '云计算和分布式系统' },
-                    ]
-                },],
-
-            });
-
-            var inst1 = tree.render({
-                elem: '#course1'  //绑定元素
-                , data: [{
-                    title: '课程概览' //一级菜单
-                    , children: [
-                        { title: '财务基础' },
-                        { title: 'python与人工智能' },//二级菜单
-                        { title: '财务报告与信息披露' },
-
-                        { title: '数据库系统原理' },
-
-                        { title: '数据结构' },
-                        { title: '企业税务管理与决策' },
-                        { title: '风险管控与数字审计' },
-                        { title: '大数据与智能财务' },
-                        { title: '公司战略和风险管理' },
-                        { title: '海量数据存储和管理' },//二级菜单
-                        { title: '云计算和分布式系统' },
-                    ]
-                },],
-
-            });
-
-            var inst2 = tree.render({
-                elem: '#course2'  //绑定元素
-                , data: [{
-                    title: '课程概览' //一级菜单
-                    , children: [
-                        { title: '财务基础' },
-
-                        { title: '财务报告与信息披露' },
-
-                        { title: '数据库系统原理' },
-
-                        { title: '企业税务管理与决策' },
-                        { title: '风险管控与数字审计' },
-                        { title: '大数据与智能财务' },
-                        { title: '公司战略和风险管理' },
-                        { title: '海量数据存储和管理' },//二级菜单
-
-                    ]
-                },],
-
-            });
-
-
-
-            var inst3 = tree.render({
-                elem: '#course3'  //绑定元素
-                , data: [{
-                    title: '课程概览' //一级菜单
-                    , children: [
-                        { title: '财务基础' },
-
-                        { title: '财务报告与信息披露' },
-
-                        { title: '数据库系统原理' },
-
-                        { title: '企业税务管理与决策' },
-                        { title: '风险管控与数字审计' },
-                        { title: '大数据与智能财务' },
-                        { title: '公司战略和风险管理' },
-
-                    ]
-                },],
-
-            });
-
-            var inst4 = tree.render({
-                elem: '#course4'  //绑定元素
-                , data: [{
-                    title: '课程概览' //一级菜单
-                    , children: [
-                        { title: '财务基础' },
-
-                        { title: '财务报告与信息披露' },
-
-                        { title: '数据库系统原理' },
-
-                        { title: '数据结构' },
-
-                        { title: '大数据与智能财务' },
-                        { title: '公司战略和风险管理' },
-
-                    ]
-                },],
-
-            });
-
-            var inst5 = tree.render({
-                elem: '#course5'  //绑定元素
-                , data: [{
-                    title: '课程概览' //一级菜单
-                    , children: [
-                        { title: '财务基础' },
-                        { title: 'python与人工智能' },//二级菜单
-                        { title: '财务报告与信息披露' },
-
-                        { title: '数据库系统原理' },
-
-                        { title: '企业税务管理与决策' },
-
-                        { title: '大数据与智能财务' },
-                        { title: '公司战略和风险管理' },
-
-                    ]
-                },],
-
-            });
-
-        });
-
-
+  
 
 
     </script>

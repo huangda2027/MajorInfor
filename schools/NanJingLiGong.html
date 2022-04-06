@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../layui-v2.6.8/layui/css/layui.css">
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+    <style>
+        .titlePhoto {
+            text-align: center;
+        }
+
+        .tree {
+            font-size: 17px;
+        }
+
+        .leftTree {
+
+            border: seagreen;
+            border-style: solid solid none none;
+            text-align: right;
+        }
+
+        .rightTree {
+            margin-top: 30px;
+            border: seagreen;
+            border-style: solid none none none;
+            text-align: left;
+        }
+
+        /* .leftTree ul li div {
+            padding-right: 10px;
+        } */
+
+        .leftTree ul div a {
+            margin-right: 10px;
+            display: block;
+        }
+
+        .rightTree ul div a {
+            margin-left: 10px;
+            display: block;
+        }
+
+        /* .leftTree ul li::before {
+            position: absolute;
+            content: '';
+            top: -0.01em;
+            left: -0.7em;
+            width: 0.5em;
+            height: 0.615em;
+            border-style: none none solid solid;
+            border-width: 0.05em;
+            border-color: #aaa;
+        } */
+    </style>
+    <title>专业介绍</title>
+</head>
+
+<body bgcolor="lightblue">
+    <ul class="layui-nav" lay-filter="">
+        <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
+        <li class="layui-nav-item"><a href="">主页</a></li>
+        <li class="layui-nav-item layui-this"><a href="">专业介绍</a></li>
+        <li class="layui-nav-item"><a href="">招生就业</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">数据分析</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="../pages/compare.html">课程对比</a></dd>
+                <dd><a href="">培养计划</a></dd>
+                <dd><a href="">专业走向</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+
+
+   <img src="./img/南京理工.png" alt="">
+
+    <hr>
+    这是页尾
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use(['element'], function () {
+            var element = layui.element;
+  
+
+
+    </script>
+
+
+</body>
+
+</html>

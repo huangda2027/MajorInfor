@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../layui-v2.6.8/layui/css/layui.css">
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+    <style>
+            .trans{
+                float: left;
+            }
+
+            .guide{
+                float: left;
+                margin: 65px;
+                background-color: #fff;
+            }
+    </style>
+    <title>专业介绍</title>
+</head>
+
+<body bgcolor="lightblue">
+    <ul class="layui-nav" lay-filter="">
+        <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
+        <li class="layui-nav-item"><a href="">主页</a></li>
+        <li class="layui-nav-item"><a href="">专业介绍</a></li>
+        <li class="layui-nav-item"><a href="">招生就业</a></li>
+        <li class="layui-nav-item layui-this">
+            <a href="javascript:;">数据分析</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="./compare.html">课程对比</a></dd>
+                <dd><a href="">培养计划</a></dd>
+                <dd><a href="">专业走向</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+
+    <div class="layui-col-md10 layui-col-md-offset1">
+        <div >
+            <div id="test1" class="trans"></div>
+            <div class="guide"> <h2>在这个页面，你可以进行高校间开展课程的对比</p></div>
+        </div>
+       
+        
+        <table class="layui-table">
+            <colgroup>
+              <col>
+              <col >
+              <col>
+            </colgroup>
+            <thead>
+              <tr id="schoolName">
+                <th>课程/高校</th>
+                <th>杭州电子科技大学</th>
+                <!-- <th>签名</th> -->
+              </tr> 
+            </thead>
+            <tbody id="myTableBody">
+    
+            </tbody>
+          </table>
+    
+    </div>
+
+
+ 
+
+
+
+</body>
+<script>
+    function catalogue(i){
+    var result;
+    switch (i) 
+        { 
+        case 0:result="财务基础"; break; 
+        case 1:result="Python与人工智能"; break; 
+        case 2:result="财务报告和信息披露"; break; 
+        case 3:result="面向对象程序设计"; break; 
+        case 4:result="数据库系统原理"; break; 
+        case 5:result="计算机组成原理"; break; 
+        case 6:result="数据结构"; break; 
+        case 7:result="WEB应用程序设计"; break; 
+        case 8:result="软件建模分析"; break; 
+        case 9:result="企业税务管理与决策"; break; 
+        case 10:result="风险管控与数字审计"; break; 
+        case 11:result="大数据与智能财务"; break;
+        case 12:result="公司战略和风险管理"; break;
+        case 13:result="海量数据存储和管理"; break;
+        case 14:result="云计算和分布式系统"; break;
+        }
+      return result;  
+}
+var i;
+tbody = document.querySelector("#myTableBody")
+for(i=0;i<15;i++){
+    tr = document.createElement("tr")
+    tr.setAttribute("id","course"+i)
+    td = document.createElement("td");
+    td.innerHTML = catalogue(i);
+    td1 = document.createElement("td");
+    td1.innerHTML = "√"
+    //console.log(td.innerHTML);
+    tr.appendChild(td);
+    tr.appendChild(td1);
+    tbody.appendChild(tr);
+}
+</script>
+<script>
+
+
+
+function test(){
+alert("!")
+}
+
+
+layui.use(['transfer','element'], function(){
+var transfer = layui.transfer;
+
+//渲染
+transfer.render({
+elem: '#test1'  //绑定元素
+,data: [
+{"value": "1", "title": "浙江大学", "disabled": "", "checked": "","course":["√","√","√","","√","","√","","","√","√","√","√","√","√",]}
+,{"value": "2", "title": "南京理工大学", "disabled": "", "checked": "","course":["√","","√","","√","","","","","√","√","√","√","","",]}
+,{"value": "3", "title": "南京审计大学", "disabled": "", "checked": "","course":["√","","√","","√","","","","","√","√","√","√","√","",]}
+,{"value": "4", "title": "广东财经大学", "disabled": "", "checked": "","course":["√","","√","","√","","√","","","","","√","√","","",]}
+,{"value": "5", "title": "山东财经大学", "disabled": "", "checked": "","course":["√","√","√","","√","","","","","√","","√","√","","",]}
+]
+,id: 'demo1' //定义索引
+,onchange: function(data, index){
+
+var i,j,k;
+for(i=0;i<15;i++){
+    if(data[0].course[i] == "√")
+    console.log(data[0].course[i])
+    else
+    console.log(0)
+}
+
+console.log("===============")
+for(i=0;i<data.length;i++){
+    console.log(data[i].title+ "and"+ data[i].course[i])
+
+    var schoolName = document.querySelector("#schoolName");
+    var course=new Array();
+    for(k=0;k<15;k++){
+        course[k] = document.querySelector("#course"+k);
+        //console.log(course[i])
+    }
+    if(index == 0){
+    
+        var th = document.createElement("th");
+        th.innerHTML = data[i].title;
+        schoolName.appendChild(th);
+        //alert("!")
+        for(j=0;j<15;j++){
+            var td = document.createElement("td");
+            td.innerHTML =data[i].course[j];
+            console.log("第"+j+"行："+td.innerHTML)
+            console.log(course[j])
+            course[j].appendChild(td) 
+            //course[j].appendChild(td);
+        }
+        
+    }
+    else if(index == 1){
+       
+        var deleteSchool = document.querySelectorAll('#schoolName>th');
+        for(j=0;j<deleteSchool.length;j++){
+            console.log("deleteSchool["+j+"]:"+deleteSchool[j].innerHTML+",data.title:"+data[i].title)
+            if(deleteSchool[j].innerHTML == data[i].title){
+                console.log("in")
+                deleteSchool[j].parentNode.removeChild(deleteSchool[j]);
+                for(k=0;k<15;k++){
+                    var deleteCourse = document.querySelectorAll('#course'+k+'>td')
+                    deleteCourse[j].parentNode.removeChild(deleteCourse[j]);
+                }
+            }                   
+        }
+
+        // var info =  document.querySelectorAll('#course1>td');
+        // for(i=0;i<info.length;i++){
+        //     console.log("!!"+info[i].innerHTML)
+        //     info[i].parentNode.removeChild(info[i]);
+        // }
+        // console.log(info)
+        //     console.log(data); //得到当前被穿梭的数据
+        //     console.log(index); //如果数据来自左边，index 为 0，否则为 1
+    }
+}
+// console.log(data.length);
+// console.log(data[0].title+ "and"+ data[0].course1)
+
+
+//test();
+}
+});
+});
+</script>
+
+</html>
