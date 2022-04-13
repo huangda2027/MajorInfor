@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../layui-v2.6.8/layui/css/layui.css">
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+    <style>
+        .main {
+            background: #fff;
+            height: 800px;
+            margin-top: 30px;
+
+        }
+
+        .content {
+            font-size: 20px;
+        }
+    </style>
+    <title>专业介绍</title>
+</head>
+
+<body bgcolor="lightblue">
+    <ul class="layui-nav" lay-filter="">
+        <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
+        <li class="layui-nav-item"><a href="">主页</a></li>
+        <li class="layui-nav-item layui-this"><a href="">专业介绍</a></li>
+        <li class="layui-nav-item"><a href="">招生就业</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">数据分析</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="../pages/compare.html">课程对比</a></dd>
+                <dd><a href="">培养计划</a></dd>
+                <dd><a href="">专业走向</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+
+
+    <div class="layui-col-md10 layui-col-md-offset1 main">
+        <h1>Python与人工智能</h1>
+        <br>
+        <p class="content">
+            Python是一门编程语言，由于其在人工智能领域有非常广泛的应用，所以很多人在向人工智能领域发展的时候，都会从Python开始学起。<br>但是，掌握Python语言仅仅是第一步，相对于Python语言来说，人工智能领域的知识体系还是非常庞大的，学习难度也比较高，这也是为什么长期以来，人工智能领域的人才培养一直以研究生教育为主的重要原因。<br>Python语言本身是比较简单的，而且使用起来也比较方便，得益于Python语言自身的设计特点，Python语言的扩展性也非常强，这也是当前人工智能领域的开发人员，更愿意采用Python语言的原因。<br>在当前人工智能发展的大趋势下，不论是专业的研发人员，还是传统行业的从业者，掌握一定的Python开发知识，对于未来的发展都有比较现实的意义。<br>学习Python语言可以按照三个阶段来制定学习计划，其一是学习Python语言的基本语法，重点在于要形成自己的Python编程思想；其二是学习采用Python进行数据分析，可以从机器学习开始；其三是通过实践来积累经验，可以基于大数据平台来完成各种开发、分析任务。
+        </p>
+
+    </div>
+
+    <hr>
+    这是页尾
+    <script>
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use(['element'], function () {
+            var element = layui.element;
+
+
+
+    </script>
+
+
+</body>
+
+</html>
