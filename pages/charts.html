@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../layui-v2.6.8/layui/css/layui.css">
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+    <style>
+        .trans {
+            float: left;
+        }
+
+        .guide {
+            float: left;
+            margin: 65px;
+            background-color: #fff;
+        }
+
+        .first {
+            margin-bottom: 30px;
+        }
+
+        .analyze {
+            font-size: 20px;
+            font-weight: 800;
+        }
+    </style>
+    <title>专业介绍</title>
+</head>
+
+<body bgcolor="lightblue">
+    <ul class="layui-nav" lay-filter="">
+        <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
+        <li class="layui-nav-item"><a href="../index.html">主页</a></li>
+        <li class="layui-nav-item"><a href="">专业介绍</a></li>
+        <li class="layui-nav-item"><a href="">招生就业</a></li>
+        <li class="layui-nav-item layui-this">
+            <a href="javascript:;">数据分析</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="./compare.html">课程对比</a></dd>
+                <dd><a href="">培养计划</a></dd>
+                <dd><a href="./charts.html">图表分析</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+
+    <div class="layui-col-md10 layui-col-md-offset1 first">
+        <br><br><br>
+        <div>
+            <div id="gram1" style="width: 600px;height:400px;background-color:#fff;float: left;">
+
+
+            </div>
+            <div>
+                <pre class="analyze">
+                    分析结果：开展智能财务专业高校课程的学校逐年增加。
+                    可能原因：智能财务适应疫情之下的社会需求。
+                    </pre>
+
+            </div>
+        </div>
+        <script src="../js/echarts.js"></script>
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('gram1'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '开设智能财务专业的院校数量变化趋势'
+                },
+                tooltip: {},
+                xAxis: {
+                    name: '年份',
+                    data: ['2018', '2019', '2020', '2021'],
+                    axisLine: {
+                        symbol: 'arrow',
+                        lineStyle: {
+                            type: 'dashed'
+                            // ...
+                        }
+                    }
+                },
+                yAxis: {
+                    name: '院校数量'
+                },
+                series: [
+                    {
+                        name: '院校数量',
+                        type: 'bar',
+                        data: [5, 19, 22, 31]
+                    }
+                ]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+
+    </div>
+
+    <div class="layui-col-md10 layui-col-md-offset1 first">
+        <div>
+            <div id="gram2" style="width: 600px;height:400px;background-color:#fff;float: right;">
+            </div>
+
+        </div>
+        <div>
+            <pre class="analyze">
+            分析结果：开展智能财务的高校中，综合类高校占比较高。
+            可能原因：智能财务设计财务方面的知识以及计算机方面的知识，综合类高校开展该专业有着天然的优势。
+                        
+            </pre>
+
+        </div>
+
+        <script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('gram2'));
+            var option = {
+                title: {
+                    text: '2021年开设智能财务院校类别',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['综合性大学', '财经类大学', '理工科大学', '师范类大学']
+                },
+                series: [
+                    {
+                        name: '大学属类',
+                        type: 'pie',
+                        radius: '55%',
+                        center: ['50%', '60%'],
+                        data: [
+                            { value: 14, name: '综合性大学' },
+                            { value: 9, name: '财经类大学' },
+                            { value: 6, name: '理工科大学' },
+                            { value: 2, name: '师范类大学' },
+                        ],
+                        emphasis: {
+                            itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            };
+
+            let currentIndex = -1;
+
+
+            setInterval(function () {
+                var dataLen = option.series[0].data.length;
+                // 取消之前高亮的图形
+                myChart.dispatchAction({
+                    type: 'downplay',
+                    seriesIndex: 0,
+                    dataIndex: currentIndex
+                });
+                currentIndex = (currentIndex + 1) % dataLen;
+                // 高亮当前图形
+                myChart.dispatchAction({
+                    type: 'highlight',
+                    seriesIndex: 0,
+                    dataIndex: currentIndex
+                });
+                // 显示 tooltip
+                myChart.dispatchAction({
+                    type: 'showTip',
+                    seriesIndex: 0,
+                    dataIndex: currentIndex
+                });
+            }, 1000);
+            myChart.setOption(option);
+        </script>
+
+    </div>
+
+
+</body>
+
+
+</html>

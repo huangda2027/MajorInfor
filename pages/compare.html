@@ -21,6 +21,11 @@
         .first {
             margin-bottom: 30px;
         }
+
+        .analyze {
+            font-size: 20px;
+            font-weight: 800;
+        }
     </style>
     <title>专业介绍</title>
 </head>
@@ -28,7 +33,7 @@
 <body bgcolor="lightblue">
     <ul class="layui-nav" lay-filter="">
         <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
-        <li class="layui-nav-item"><a href="">主页</a></li>
+        <li class="layui-nav-item"><a href="../index.html">主页</a></li>
         <li class="layui-nav-item"><a href="">专业介绍</a></li>
         <li class="layui-nav-item"><a href="">招生就业</a></li>
         <li class="layui-nav-item layui-this">
@@ -37,7 +42,7 @@
                 <!-- 二级菜单 -->
                 <dd><a href="./compare.html">课程对比</a></dd>
                 <dd><a href="">培养计划</a></dd>
-                <dd><a href="">专业走向</a></dd>
+                <dd><a href="./charts.html">图表分析</a></dd>
             </dl>
         </li>
         <li class="layui-nav-item"><a href="">社区</a></li>
@@ -73,6 +78,15 @@
                     </tbody>
                 </table>
 
+                <div>
+                    <pre class="analyze">
+                    分析结果：财务基础、数据库系统原理、公司战略和风险管理和海量数据存储和管理四门课程是每个学校都会开展的课程。
+                    可能原因：①财务基础和数据库系统原理这两门课程涵盖了智能财务最基础的知识————数据的收集、存储和利用。
+                              ②当今时代充满机遇与挑战，战略和风险是一个管理者必须要掌握的内容。
+                              ③疫情之下，互联网上的数据早已不能和以前同日而语，如何处理好海量数据也是智能财务师的必修课。
+                    </pre>
+
+                </div>
             </div>
 
             <div style="display: none;" id="compareBox2">
@@ -89,7 +103,14 @@
 
                     </tbody>
                 </table>
+                <div>
+                    <pre class="analyze">
+                    分析结果：财务基础、数据库系统原理等基础课程基本在前四个学期都会完成学习，而较难的大数据与智能财务
+                    、云计算和分布式系统等课程则会放到后四个学期。
+                    可能原因：课程学习需要循序渐进，由易到难。
+                    </pre>
 
+                </div>
             </div>
         </div>
     </div>

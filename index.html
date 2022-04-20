@@ -2,49 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./layui-v2.6.8/layui/css/layui.css">
-    <script src="./layui-v2.6.8/layui/layui.js"></script>
-    <style>
-        .titlePhoto {
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./layui-v2.6.8/layui/css/layui.css">
+  <script src="./layui-v2.6.8/layui/layui.js"></script>
+  <style>
+    .titlePhoto {
+      text-align: center;
+    }
 
-        .tree {
-            font-size: 17px;
-        }
+    .tree {
+      font-size: 17px;
+    }
 
-        .leftTree {
+    .leftTree {
 
-            border: seagreen;
-            border-style: solid solid none none;
-            text-align: right;
-        }
+      border: seagreen;
+      border-style: solid solid none none;
+      text-align: right;
+    }
 
-        .rightTree {
-            margin-top: 30px;
-            border: seagreen;
-            border-style: solid none none none;
-            text-align: left;
-        }
+    .rightTree {
+      margin-top: 30px;
+      border: seagreen;
+      border-style: solid none none none;
+      text-align: left;
+    }
 
-        /* .leftTree ul li div {
+    /* .leftTree ul li div {
             padding-right: 10px;
         } */
 
-        .leftTree ul div a {
-            margin-right: 10px;
-            display: block;
-        }
+    .leftTree ul div a {
+      margin-right: 10px;
+      display: block;
+    }
 
-        .rightTree ul div a {
-            margin-left: 10px;
-            display: block;
-        }
+    .rightTree ul div a {
+      margin-left: 10px;
+      display: block;
+    }
 
-        /* .leftTree ul li::before {
+    /* .leftTree ul li::before {
             position: absolute;
             content: '';
             top: -0.01em;
@@ -55,126 +55,126 @@
             border-width: 0.05em;
             border-color: #aaa;
         } */
-    </style>
-    <title>专业介绍</title>
+  </style>
+  <title>专业介绍</title>
 </head>
 
 <body bgcolor="lightblue">
-    <ul class="layui-nav" lay-filter="">
-        <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
-        <li class="layui-nav-item"><a href="">主页</a></li>
-        <li class="layui-nav-item layui-this"><a href="">专业介绍</a></li>
-        <li class="layui-nav-item"><a href="">招生就业</a></li>
-        <li class="layui-nav-item">
-            <a href="javascript:;">数据分析</a>
-            <dl class="layui-nav-child">
-                <!-- 二级菜单 -->
-                <dd><a href="./pages/compare.html">课程对比</a></dd>
-                <dd><a href="">培养计划</a></dd>
-                <dd><a href="">专业走向</a></dd>
-            </dl>
-        </li>
-        <li class="layui-nav-item"><a href="">社区</a></li>
-    </ul>
-    <div class="layui-row">
-        <div class="layui-col-md12">
-            <img src="img/专业介绍.webp" alt="" style="width: 100%; height: 400px;">
-            <br>
-            <p
-                style="position:absolute; z-index:2; left: 100px; top: 100px;; font-size: 50px; font-weight: 600; color: rgba(144, 153, 231, 0.911);">
-                专业介绍</p>
-            <br>
-            <p
-                style="position:absolute; z-index:2; left: 100px; top: 220px;; font-size: 20px; font-weight: 600; color: rgba(107, 182, 233, 0.911);">
-                目前该网站已经收录了6所高校智能财务专业的相关信息<br>包括专业简介，培养目标，课程概览等</p>
-            <br>
+  <ul class="layui-nav" lay-filter="">
+    <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
+    <li class="layui-nav-item"><a href="">主页</a></li>
+    <li class="layui-nav-item layui-this"><a href="">专业介绍</a></li>
+    <li class="layui-nav-item"><a href="">招生就业</a></li>
+    <li class="layui-nav-item">
+      <a href="javascript:;">数据分析</a>
+      <dl class="layui-nav-child">
+        <!-- 二级菜单 -->
+        <dd><a href="./pages/compare.html">课程对比</a></dd>
+        <dd><a href="">培养计划</a></dd>
+        <dd><a href="/pages/charts.html">图表分析</a></dd>
+      </dl>
+    </li>
+    <li class="layui-nav-item"><a href="">社区</a></li>
+  </ul>
+  <div class="layui-row">
+    <div class="layui-col-md12">
+      <img src="img/专业介绍.webp" alt="" style="width: 100%; height: 400px;">
+      <br>
+      <p
+        style="position:absolute; z-index:2; left: 100px; top: 100px;; font-size: 50px; font-weight: 600; color: rgba(144, 153, 231, 0.911);">
+        专业介绍</p>
+      <br>
+      <p
+        style="position:absolute; z-index:2; left: 100px; top: 220px;; font-size: 20px; font-weight: 600; color: rgba(107, 182, 233, 0.911);">
+        目前该网站已经收录了6所高校智能财务专业的相关信息<br>包括专业简介，培养目标，课程概览等</p>
+      <br>
+    </div>
+
+  </div>
+
+
+  <div class="timeLine">
+    <ul class="layui-timeline">
+      <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+          <h3 class="layui-timeline-title">2018年9月14日 </h3>
+          <a href="./schools/NanJingLiGong.html">南京理工大学</a>>
+          <p>
+            南京理工大学（Nanjing University of Science and Technology），简称“南理工”，位于江苏省南京市，是隶属于工业和信息化部，
+            <br>由工信部、教育部与江苏省人民政府共建的全国重点大学，是国家“双一流”建设高校
+          </p>
         </div>
+      </li>
+      <br>
+      <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+          <h3 class="layui-timeline-title">2019年6月3日 </h3>
+          <a href="">浙江大学</a>>
+          <p>
+            浙江大学（Zhejiang University），简称“浙大”，位于浙江省杭州市，是中华人民共和国教育部直属的综合性全国重点大学，位列国家“双一流”。
+          </p>
+        </div>
+      </li>
+      <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+          <h3 class="layui-timeline-title">2019年9月2日 </h3>
+          <a href="">南京审计大学</a>>
+          <p>
+            南京审计大学（Nanjing Audit University），简称“南审”，位于江苏省南京市，
+            <br>是中国审计高等教育发源地之一，是教育部、财政部、审计署和江苏省人民政府共建高校
+          </p>
+        </div>
+      </li>
+      <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+          <h3 class="layui-timeline-title">2020年9月1日 </h3>
+          <a href="">杭州电子科技大学</a>>
+          <p>
+            杭州电子科技大学（Hangzhou Dianzi University），简称“杭电”，位于杭州市，是浙江省人民政府与国防科技工业局共建高校，
+            <br>是一所电子信息特色突出，经管学科优势明显，工、理、经、管、文、法、艺等多学科相互渗透的教学研究型大学
+          </p>
+        </div>
+      </li>
+      <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+          <h3 class="layui-timeline-title">2021年1月16日 </h3>
+          <a href="">山东财经大学</a>>
+          <p>
+            山东财经大学（Shandong University of Finance and Economics），位于山东省济南市，
+            <br>是山东省人民政府与中华人民共和国财政部、中华人民共和国教育部共建高校。
+          </p>
+        </div>
+      </li>
+      <li class="layui-timeline-item">
+        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+        <div class="layui-timeline-content layui-text">
+          <h3 class="layui-timeline-title">2021年10月27日 </h3>
+          <a href="">广东财经大学</a>>
+          <p>
+            广东财经大学（Guangdong University of Finance & Economics）是一所以经济学、管理学、法学为主体，
+            <br>文学、理学、工学、艺术学等多学科协同发展的广东省重点建设大学
+          </p>
+        </div>
+      </li>
 
-    </div>
+    </ul>
+  </div>
 
-
-    <div class="timeLine">
-        <ul class="layui-timeline">
-            <li class="layui-timeline-item">
-              <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-              <div class="layui-timeline-content layui-text">
-                <h3 class="layui-timeline-title">2018年9月14日 </h3>
-                    <a href="./schools/NanJingLiGong.html">南京理工大学</a>>
-                    <p>
-                        南京理工大学（Nanjing University of Science and Technology），简称“南理工”，位于江苏省南京市，是隶属于工业和信息化部，
-                        <br>由工信部、教育部与江苏省人民政府共建的全国重点大学，是国家“双一流”建设高校
-                    </p>
-              </div>
-            </li>
-            <br>
-            <li class="layui-timeline-item">
-                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                <div class="layui-timeline-content layui-text">
-                  <h3 class="layui-timeline-title">2019年6月3日 </h3>
-                      <a href="">浙江大学</a>>
-                      <p>
-                        浙江大学（Zhejiang University），简称“浙大”，位于浙江省杭州市，是中华人民共和国教育部直属的综合性全国重点大学，位列国家“双一流”。
-                      </p>
-                </div>
-              </li>
-              <li class="layui-timeline-item">
-                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                <div class="layui-timeline-content layui-text">
-                  <h3 class="layui-timeline-title">2019年9月2日 </h3>
-                      <a href="">南京审计大学</a>>
-                      <p>
-                        南京审计大学（Nanjing Audit University），简称“南审”，位于江苏省南京市，
-                        <br>是中国审计高等教育发源地之一，是教育部、财政部、审计署和江苏省人民政府共建高校
-                      </p>
-                </div>
-              </li>
-              <li class="layui-timeline-item">
-                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                <div class="layui-timeline-content layui-text">
-                  <h3 class="layui-timeline-title">2020年9月1日 </h3>
-                      <a href="">杭州电子科技大学</a>>
-                      <p>
-                        杭州电子科技大学（Hangzhou Dianzi University），简称“杭电”，位于杭州市，是浙江省人民政府与国防科技工业局共建高校，
-                        <br>是一所电子信息特色突出，经管学科优势明显，工、理、经、管、文、法、艺等多学科相互渗透的教学研究型大学
-                      </p>
-                </div>
-              </li>
-              <li class="layui-timeline-item">
-                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                <div class="layui-timeline-content layui-text">
-                  <h3 class="layui-timeline-title">2021年1月16日 </h3>
-                      <a href="">山东财经大学</a>>
-                      <p>
-                        山东财经大学（Shandong University of Finance and Economics），位于山东省济南市，
-                        <br>是山东省人民政府与中华人民共和国财政部、中华人民共和国教育部共建高校。
-                      </p>
-                </div>
-              </li>
-              <li class="layui-timeline-item">
-                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
-                <div class="layui-timeline-content layui-text">
-                  <h3 class="layui-timeline-title">2021年10月27日 </h3>
-                      <a href="">广东财经大学</a>>
-                      <p>
-                        广东财经大学（Guangdong University of Finance & Economics）是一所以经济学、管理学、法学为主体，
-                        <br>文学、理学、工学、艺术学等多学科协同发展的广东省重点建设大学
-                      </p>
-                </div>
-              </li>
-
-          </ul>
-    </div>
-
-    <hr>
-    这是页尾
-    <script>
-        //注意：导航 依赖 element 模块，否则无法进行功能性操作
-        layui.use(['element'], function () {
-            var element = layui.element;
-  
+  <hr>
+  这是页尾
+  <script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use(['element'], function () {
+      var element = layui.element;
 
 
-    </script>
+
+  </script>
 
 
 </body>
