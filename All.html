@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="layui-v2.6.8/layui/css/layui.css">
+    <script src="./layui-v2.6.8/layui/layui.js"></script>
+</head>
+
+<body bgcolor="lightblue">
+    <ul class="layui-nav" lay-filter="">
+        <li><img src="./img/logo1.1.png" alt="" style="float: left;"></li>
+        <li class="layui-nav-item"><a href="">主页</a></li>
+        <li class="layui-nav-item layui-this"><a href="">专业介绍</a></li>
+        <li class="layui-nav-item"><a href="">招生就业</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">考研攻略</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+    <div class="layui-col-md10 layui-col-md-offset1">
+
+        <table class="layui-table">
+            <colgroup>
+                <col width="150">
+                <col width="200">
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>高校</th>
+                    <th>类型</th>
+                    <th>课程</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                <tr>
+                    <td>杭州电子科技大学</td>
+                    <td>理工类</td>
+                    <td>财务</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+<script>
+    var settings = {
+        "url": "http://hjlhjlhjl.xyz:8080/uniFunction/findAll",
+        "method": "GET",
+        "timeout": 0,
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        var box = document.querySelector("#data")
+        for (var i = 0; i < getJsonLength(response); i++) {
+            var tr = document.createElement("tr");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+
+            td1.innerHTML = response[i].UniName;
+            td2.innerHTML = response[i].rank;
+            td3.innerHTML = "";
+            for (var j = 0; j < getJsonLength(response[i].information); j++) {
+                td3.innerHTML += response[i].information[j].courseName;
+                td3.innerHTML += "   "
+            }
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            box.appendChild(tr);
+        }
+
+    });
+
+    function getJsonLength(jsonData) {
+        var jsonLength = 0;
+        for (var item in jsonData) {
+            jsonLength++;
+        }
+        return jsonLength;
+    }
+</script>
+
+</html>

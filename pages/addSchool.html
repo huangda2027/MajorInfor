@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../layui-v2.6.8/layui/css/layui.css">
+    <script src="../layui-v2.6.8/layui/layui.js"></script>
+    <script src="../js/jquery-3.6.0.js"></script>
+    <style>
+        .formStyle {
+            background-color: rgb(236, 231, 222);
+            height: 400px;
+            margin-top: 20px;
+        }
+
+        .selectStyle {
+            height: 40px;
+            width: 100px;
+            font-size: 20px;
+        }
+    </style>
+    <title>专业介绍</title>
+</head>
+
+<body bgcolor="lightblue">
+    <ul class="layui-nav" lay-filter="">
+        <li><img src="" alt="" style="float: left;"></li>
+        <li class="layui-nav-item"><a href="../index.html">主页</a></li>
+        <li class="layui-nav-item"><a href="">专业介绍</a></li>
+        <li class="layui-nav-item"><a href="">招生就业</a></li>
+        <li class="layui-nav-item layui-this">
+            <a href="javascript:;">数据分析</a>
+            <dl class="layui-nav-child">
+                <!-- 二级菜单 -->
+                <dd><a href="./compare.html">课程对比</a></dd>
+                <dd><a href="">培养计划</a></dd>
+                <dd><a href="./charts.html">图表分析</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+    </ul>
+
+    <div class="layui-col-md8 layui-col-md-offset2 formStyle" id="page1">
+
+        <h1>第一步：填写高校基本信息</h1>
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">高校名称</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="UniName" required lay-verify="required" placeholder="请输入高校名称"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">高校类型</label>
+                <div class="layui-input-block">
+                    <select name="rank" lay-verify="required">
+                        <option value=""></option>
+                        <option value="理工类高校">理工类高校</option>
+                        <option value="经管类高校">经管类高校</option>
+                        <option value="综合类高校">综合类高校</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">高校简介</label>
+                <div class="layui-input-block">
+                    <textarea name="infor" placeholder="请输入内容" class="layui-textarea"></textarea>
+                </div>
+            </div>
+
+            <!-- <div class="layui-form-item">
+                <div class="layui-input-block">
+                    
+                </div>
+            </div> -->
+        </form>
+        <button class="layui-btn" onclick="next()">下一步</button>
+    </div>
+
+    <div class="layui-col-md10 layui-col-md-offset1 formStyle" id="page2" style="display: none;">
+
+        <h1>第二步：填写专业课程信息</h1>
+        <form action="" class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">课程选择</label>
+                <div class="layui-input-block">
+                    <input type="checkbox" name="course" title="财务基础">
+                    <input type="checkbox" name="course" title="python与人工智能" checked>
+                    <input type="checkbox" name="course" title="数据库系统原理" checked>
+                    <input type="checkbox" name="course" title="计算机组成原理">
+                    <input type="checkbox" name="course" title="数据结构">
+                    <input type="checkbox" name="course" title="WEB引用程序设计">
+                    <input type="checkbox" name="course" title="软件建模与分析">
+                    <input type="checkbox" name="course" title="企业税务管理与决策">
+                    <input type="checkbox" name="course" title="风险管控与数字审计" checked>
+                    <input type="checkbox" name="course" title="大数据与智能财务" checked>
+                    <input type="checkbox" name="course" title="公司战略和风险管理">
+                    <input type="checkbox" name="course" title="海量数据存储和管理">
+                    <input type="checkbox" name="course" title="云计算和分布式系统">
+                    <input type="checkbox" name="course" title="财务报告与信息披露">
+                    <input type="checkbox" name="course" title="面向对象程序设计">
+                </div>
+
+
+            </div>
+        </form>
+        <button class="layui-btn" onclick="confirm()"> 确认</button>
+
+        <h1>课程开展信息</h1>
+        <div id="dateSet">
+
+            <!-- <div>
+                    <h1 style="float: left;">云计算和分布式系统</h1>
+                    <div class="layui-input-block  layui-col-md2 " style="float: left;">
+                        <select>
+                            <option value="">请选择一个城市</option>
+                            <option value="010">北京</option>
+                            <option value="021">上海</option>
+                            <option value="0571">杭州</option>
+                        </select>
+                    </div>
+                </div> -->
+
+        </div>
+        <button class="layui-btn" onclick="upload()"> 提交</button>
+
+        <button></button>
+    </div>
+
+
+
+
+</body>
+<script>
+    function confirm() {
+        courses = document.getElementsByName("course");
+
+        dateSet = document.querySelector("#dateSet");
+        // var children = dateSet.children
+        // //alert(children.length)
+        // for (var k = children.length - 1; k >= 0; i++) {
+        //     dateSet.removeChild(children[k]);
+        //     //children[k].parentNode.removeChild(children[k])
+        // }
+        for (var i = 0; i < courses.length; i++) {
+            console.log(courses[i].checked);
+            if (courses[i].checked == true) {
+                var box = document.createElement("div");
+                var h1 = document.createElement("h1");
+                h1.setAttribute("style", "float: left;")
+                //h1.style.float = "left"
+                h1.innerHTML = courses[i].title;
+                var inBox = document.createElement("div");
+                //inBox.setAttribute("class", "layui-input-block");
+                //inBox.style.float = "left";
+                inBox.setAttribute("style", "float: left;")
+                var select = document.createElement("select");
+                select.setAttribute("class", "selectStyle");
+                select.setAttribute("id", "course" + i);
+                for (var j = 1; j <= 8; j++) {
+                    var option = document.createElement("option");
+                    option.value = "第" + j + "学期";
+                    option.innerHTML = "第" + j + "学期"
+                    select.appendChild(option);
+                }
+                inBox.appendChild(select);
+                box.appendChild(h1);
+                box.appendChild(inBox);
+                dateSet.appendChild(box);
+            }
+        }
+
+
+        console.log(dateSet)
+    }
+
+
+    dates = document.getElementsByName("date");
+
+
+    function show() {
+        courses = document.getElementsByName("course");
+        dates = document.getElementsByName("dateBlock");
+        console.log(dates)
+
+        for (var i = 0; i < courses.length; i++) {
+
+            // if (courses[i].value = "on") {
+            //     dates[i].style.display = "block"
+            // }
+
+        }
+    }
+
+
+    function upload() {
+        courses = document.getElementsByName("course");
+        for (var i = 0; i < courses.length; i++) {
+            if (courses[i].checked == true) {
+                var select = document.querySelector("#course" + i);
+                console.log(select.value);
+                addClass(select.value, i + 1);
+            }
+
+        }
+        alert("添加成功");
+    }
+
+    function addClass(date, courseId) {
+        UniId = sessionStorage.getItem("UniId");
+        //alert(UniId);
+        var settings = {
+            "url": "http://hjlhjlhjl.xyz:8080/uniFunction/addCourse",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({
+                "courseId": courseId,
+                "UniId": UniId,
+                "content": "",
+                "date": date
+            }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+    }
+</script>
+<script>
+    layui.use(['form', 'tree', 'element', 'upload'], function () {
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+    });
+
+    function next() {
+        page1 = document.querySelector("#page1");
+        page2 = document.querySelector("#page2");
+        page1.style.display = "none";
+        page2.style.display = "block";
+        UniName = document.getElementsByName("UniName")[0].value;
+        rank = document.getElementsByName("rank")[0].value;
+        info = document.getElementsByName("infor")[0].value;
+        console.log(UniName);
+        console.log(rank);
+        var settings = {
+            "url": "http://hjlhjlhjl.xyz:8080/uniFunction/addUniversity",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "data": JSON.stringify({
+                "UniName": UniName,
+                "type": "无敌",
+                "rank": rank
+            }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            sessionStorage.setItem("UniId", response.UniId);
+        });
+        //alert()
+    }
+
+
+
+</script>
+
+
+</html>

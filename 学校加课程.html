@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    课程编号<input type="text" id="courseId">
+    <button onclick="add()">加课程</button>
+</body>
+<script>
+    function add() {
+        courseId = document.querySelector("#courseId").value;
+        console.log(courseId);
+        alert("我是傻杯~CS的King");
+        //alert(courseId);
+        var settings = {
+            "url": "http://hjlhjlhjl.xyz:8080/uniFunction/addCourse",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "xhrFields": {
+                withCredentials: true
+            },
+            "data": JSON.stringify({
+                "courseId": courseId,
+                "UniId": 20,
+                "content": "",
+                "date": ""
+            }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+    }
+</script>
+
+</html>

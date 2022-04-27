@@ -66,20 +66,20 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">课程选择</label>
                 <div class="layui-input-block" <input type="checkbox" name="like[write]" title="财务基础">
-                    <input type="checkbox" name="like[read]" title="python与人工智能" checked>
-                    <input type="checkbox" name="like[dai]" title="财务报告与信息披露">
-                    <input type="checkbox" name="like[write]" title="面向对象程序设计">
-                    <input type="checkbox" name="like[read]" title="数据库系统原理" checked>
-                    <input type="checkbox" name="like[dai]" title="计算机组成原理">
-                    <input type="checkbox" name="like[write]" title="数据结构">
-                    <input type="checkbox" name="like[read]" title="WEB引用程序设计">
-                    <input type="checkbox" name="like[dai]" title="软件建模与分析">
-                    <input type="checkbox" name="like[write]" title="企业税务管理与决策">
-                    <input type="checkbox" name="like[read]" title="风险管控与数字审计" checked>
-                    <input type="checkbox" name="like[dai]" title="大数据与智能财务" checked>
-                    <input type="checkbox" name="like[write]" title="公司战略和风险管理">
-                    <input type="checkbox" name="like[read]" title="海量数据存储和管理">
-                    <input type="checkbox" name="like[dai]" title="云计算和分布式系统">
+                    <input type="checkbox" name="course" title="python与人工智能" checked>
+                    <input type="checkbox" name="course" title="财务报告与信息披露">
+                    <input type="checkbox" name="course" title="面向对象程序设计">
+                    <input type="checkbox" name="course" title="数据库系统原理" checked>
+                    <input type="checkbox" name="course" title="计算机组成原理">
+                    <input type="checkbox" name="course" title="数据结构">
+                    <input type="checkbox" name="course" title="WEB引用程序设计">
+                    <input type="checkbox" name="course" title="软件建模与分析">
+                    <input type="checkbox" name="course" title="企业税务管理与决策">
+                    <input type="checkbox" name="course" title="风险管控与数字审计" checked>
+                    <input type="checkbox" name="course" title="大数据与智能财务" checked>
+                    <input type="checkbox" name="course" title="公司战略和风险管理">
+                    <input type="checkbox" name="course" title="海量数据存储和管理">
+                    <input type="checkbox" name="course" title="云计算和分布式系统">
                     <button type="button" class="layui-btn layui-btn-radius">添加其他课程</button>
                 </div>
 
@@ -115,6 +115,7 @@
                 </div>
             </div>
         </form>
+        <button onclick="show()">jjjjjjjjjjjjj</button>
     </div>
 
 
@@ -129,6 +130,17 @@
                 return false;
             });
         });
+
+        function show() {
+            data = document.getElementsByName("course");
+            for (var i = 0; i < data.length; i++) {
+                //console.log(data[i].value);
+                if (data[i].value = "on") {
+                    console.log(data[i].getAttribute("title"));
+
+                }
+            }
+        }
     </script>
 </body>
 
